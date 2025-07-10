@@ -60,14 +60,14 @@ $$(K_{0},K_{1},K_{2},K_{3})=(MK_{0}\oplus FK_{0},MK_{1}\oplus FK_{1},MK_{2}\oplu
 		
 $$rk_{i}=K_{i+1}=K_{i}\oplus T'(K_{i+1}\oplus K_{i+2}\oplus K_{i+3}\oplus CK_{i}),i=0,1,\cdots,31$$
 
-#### 置换$T'$
+#### 置换 $T'$
 $T'$ 是将合成置换$T$的线性变换 $L$ 替换成 $L'$
 	
 	
 $$L'(B)=B\oplus(B<<<13)\oplus(B<<<23)$$
 	
 	
-#### 参数$FK$
+#### 参数 $FK$
 系统参数 $FK$ 的取值为:
 	
 	
