@@ -10,7 +10,7 @@ $$F(X_{0},X_{1},X_{2},X_{3},rk)=X_{0}\oplus T(X_{1}\oplus X_{2}\oplus X_{3}\oplu
 
 ### 合成置换T
 
-$T:Z_{2}^{32}\rightarrow Z_{2}^{32}$是个可逆变换，由非线性变换$\tau$和线性变换$L$复合而成，即$T(\cdot)=L(\tau(\cdot))$
+$T:Z_{2}^{32}\rightarrow Z_{2}^{32}$是个可逆变换，由非线性变换 $\tau$ 和线性变换 $L$ 复合而成，即 $T(\cdot)=L(\tau(\cdot))$
 	
 	
 #### 非线性变换 $\tau$
