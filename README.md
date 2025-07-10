@@ -2,7 +2,7 @@
 
 ## Project 1:
 
-做SM4的软件实现和优化了 大家搞个git repo 在里面不断commit 代码以及配套的说明文档
+SM4的软件实现和优化 
 
 ## Project 2：
 
