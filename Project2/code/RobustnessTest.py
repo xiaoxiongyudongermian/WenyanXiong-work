@@ -78,4 +78,4 @@ def robustness_test(watermarked_img_path):
 
 
 if __name__ == "__main__":
-    robustness_test("Watermarked_Result.png")  # 替换为你的含水印图像路径
+    robustness_test("Watermarked_Result.png")
