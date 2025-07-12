@@ -14,8 +14,8 @@ $$IV=7380166f4914b2b9172442d7da8a0600a96f30bc163138aae38dee4db0fb0e4e$$
 $$
 T_{j}=\left\{
 \begin{array}{l}
-79cc4519& 0≤j≤15 \\
- 7a879d8a& 16≤j≤63
+79cc4519& 0\leq j \leq 15 \\
+ 7a879d8a& 16\leq j\leq 63
 \end{array}
 \right.
 $$
@@ -25,16 +25,16 @@ $$
 $$
 FF_{j}(X,Y,Z)=\left\{
 \begin{array}{l}
-X\oplus Y\oplus Z& 0≤j≤15 \\
-(X\wedge Y)\vee (X\wedge Z)\vee (Y\wedge Z)& 16≤j≤63
+X\oplus Y\oplus Z& 0\leq j\leq 15 \\
+(X\wedge Y)\vee (X\wedge Z)\vee (Y\wedge Z)& 16\leq j\leq 63
 \end{array}
 \right.
 $$
 $$
 GG_{j}(X,Y,Z)=\left\{
 \begin{array}{l}
-X\oplus Y\oplus Z& 0≤j≤15 \\
-(X\wedge Y)\vee (\neg X\wedge Z)& 16≤j≤63
+X\oplus Y\oplus Z& 0\leq j\leq 15 \\
+(X\wedge Y)\vee (\neg X\wedge Z)& 16\leq j\leq 63
 \end{array}
 \right.
 $$
