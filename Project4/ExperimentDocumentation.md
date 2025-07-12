@@ -63,11 +63,11 @@ $$ n = (l+k+65)/512 $$
 对 $m'$ 按下列方式迭代：
 
 
-$
-FOR\ i=0\ TO\ n-1\\
-\qquad  V^{(i+1)} = CF(V^{(i)},B^{(i)})\\
-ENDFOR
-$
+$FOR\ i=0\ TO\ n-1$
+
+$\qquad  V^{(i+1)} = CF(V^{(i)},B^{(i)})$
+
+$ENDFOR$
 
 其中 $CF$ 是压缩函数， $V^{(0)}$ 为256比特初始值 $IV$ ，  $B^{(i)}$ 为填充后的消息分组，迭代压缩的结果
 为 $V^{(i)}$ 。
@@ -78,36 +78,57 @@ $
 
 1. 将消息分组 $B^{(i)}$ 划分成16个字节 $W_{0},W_{1},\cdots ,W_{15}$
 
-2. $FOR\ j=16\ TO\ 67\\
- \qquad Wj \leftarrow P_{1}(W_{j−16} \oplus W_{j−9}  \oplus (W_{j−3}<<< 15)) \oplus(W_{j−13}<<< 7) \oplus W_{j−6}\\
- ENDFOR$
+2. $FOR\ j=16\ TO\ 67$
 
-3. $FOR\ j=0\ TO\ 63\\
- \qquad W_{j}' = W_{j} \oplus W_{j+4}\\
- ENDFOR$
+$\qquad\qquad W_{j} \leftarrow P_{1}(W_{j−16} \oplus W_{j−9}  \oplus (W_{j−3}<<< 15)) \oplus(W_{j−13}<<< 7) \oplus W_{j−6}$
+
+$\qquad ENDFOR$
+
+4. $FOR\ j=0\ TO\ 63$
+   
+$\qquad\qquad W_{j}' = W_{j} \oplus W_{j+4}$
+
+$\qquad ENDFOR$
 
 #### 压缩函数
 
 令 $A,B,C,D,E,F,G,H$ 为字寄存器, $SS1,SS2,TT1,TT2$ 为中间变量,压缩函数 $V^{i+1} = CF(V^{(i)},B^{(i)}), 0 \leq  i \leq n−1$ 。计算过程描述如下：
 
-$
-ABCDEFGH \leftarrow V^{(i)}\\
-FOR\ j=0\ TO\ 63\\
-\qquad SS1 \leftarrow ((A<<<12)+E+(T_{j} <<< j))<<< 7\\
-\qquad SS2 \leftarrow SS1\oplus (A<<<12)\\
-\qquad TT1 \leftarrow FF_{j}(A,B,C)+D+SS2+W′_{j}\\
-\qquad TT2 \leftarrow GG_{j}(E,F,G)+H +SS1+W_{j}\\
-\qquad D\leftarrow C\\
-\qquad C \leftarrow B<<<9\\
-\qquad B \leftarrow A\\
-\qquad A\leftarrow TT1\\
-\qquad H \leftarrow G\\
-\qquad G\leftarrow F <<<19\\
-\qquad F \leftarrow E\\
-\qquad E \leftarrow P_{0}(TT2)\\
- ENDFOR\\
- V^{(i+1)} \leftarrow  ABCDEFGH \oplus V^{(i)}
- \\$
+
+
+
+$ABCDEFGH \leftarrow V^{(i)}$
+
+$FOR\ j=0\ TO\ 63$
+
+$\qquad SS1 \leftarrow ((A<<<12)+E+(T_{j} <<< j))<<< 7$
+
+$\qquad SS2 \leftarrow SS1\oplus (A<<<12)$
+
+$\qquad TT1 \leftarrow FF_{j}(A,B,C)+D+SS2+W′_{j}$
+
+$\qquad TT2 \leftarrow GG_{j}(E,F,G)+H +SS1+W_{j}$
+
+$\qquad D\leftarrow C$
+
+$\qquad C \leftarrow B<<<9$
+
+$\qquad B \leftarrow A$
+
+$\qquad A\leftarrow TT1$
+
+$\qquad H \leftarrow G$
+
+$\qquad G\leftarrow F <<<19$
+
+$\qquad F \leftarrow E$
+
+$\qquad E \leftarrow P_{0}(TT2)$
+
+$ENDFOR$
+
+$V^{(i+1)} \leftarrow  ABCDEFGH \oplus V^{(i)}$
+ 
  其中，字的存储为大端格式。
 
  ## 杂凑值
