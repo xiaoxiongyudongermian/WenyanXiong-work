@@ -12,31 +12,29 @@ $$IV=7380166f4914b2b9172442d7da8a0600a96f30bc163138aae38dee4db0fb0e4e$$
 ### 常量
 
 $$
-T_{j}=\left\{
-\begin{array}{l}
-79cc4519& 0\leq j \leq 15 \\
- 7a879d8a& 16\leq j\leq 63
-\end{array}
-\right.
+T_{j} = 
+\begin{cases}
+79cc4519 & 0 \leq j \leq 15 \\
+7a879d8a & 16 \leq j \leq 63
+\end{cases}
 $$
-
 ### 布尔函数
 
+
 $$
-FF_{j}(X,Y,Z)=\left\{
-\begin{array}{l}
-X\oplus Y\oplus Z& 0\leq j\leq 15 \\
-(X\wedge Y)\vee (X\wedge Z)\vee (Y\wedge Z)& 16\leq j\leq 63
-\end{array}
-\right.
+FF_{j}(X,Y,Z) = 
+\begin{cases}
+X \oplus Y \oplus Z & 0 \leq j \leq 15 \\
+(X \wedge Y) \vee (X \wedge Z) \vee (Y \wedge Z) & 16 \leq j \leq 63
+\end{cases}
 $$
+
 $$
-GG_{j}(X,Y,Z)=\left\{
-\begin{array}{l}
-X\oplus Y\oplus Z& 0\leq j\leq 15 \\
-(X\wedge Y)\vee (\neg X\wedge Z)& 16\leq j\leq 63
-\end{array}
-\right.
+GG_{j}(X,Y,Z) = 
+\begin{cases}
+X \oplus Y \oplus Z & 0 \leq j \leq 15 \\
+(X \wedge Y) \vee (\neg X \wedge Z) & 16 \leq j \leq 63
+\end{cases}
 $$
 
 其中 $X,Y,Z$ 为字。
