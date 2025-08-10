@@ -140,7 +140,7 @@ $ABCDEFGH \leftarrow V(n)$
 
 ## 思路
 
-对于 $ W_{j} \leftarrow P_{1}(W_{j−16} \oplus W_{j−9}  \oplus (W_{j−3}<<< 15)) \oplus(W_{j−13}<<< 7) \oplus W_{j−6}$ 可以将 $ W_{j−16} , W_{j−9}  , W_{j−3} ,W_{j−13}, W_{j−6}$ 取出来然后计算，并且取消函数 $P_{1}$ 直接进行计算 $ P_{1}(X)=X\oplus (X<<<15)\oplus (X<<<23) $
+对于 $W_{j} \leftarrow P_{1}(W_{j−16} \oplus W_{j−9}  \oplus (W_{j−3}<<< 15)) \oplus(W_{j−13}<<< 7) \oplus W_{j−6}$ 可以将 $W_{j−16} , W_{j−9}  , W_{j−3} ,W_{j−13}, W_{j−6}$ 取出来然后计算，并且取消函数 $P_{1}$ 直接进行计算 $P_{1}(X)=X\oplus (X<<<15)\oplus (X<<<23)$
 
 ## 结果
 
